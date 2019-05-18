@@ -15,9 +15,7 @@ extend = "Makefile.scmf.toml"
 load_script = ["wget https://raw.githubusercontent.com/orenbenkiki/scmf/master/Makefile.scmf.toml Makefile.scmf.toml"]
 ```
 
-Alternatively you can write:
-
-You would also want to add `.common.toml` to your `.gitignore` file.
+You would also want to add `Makefile.scmf.toml` to your `.gitignore` file.
 
 ## Usage:
 
@@ -43,7 +41,7 @@ The set of flows should be as follows:
   find any possible reason to reject the new version. It invokes the following
   sub-flows:
 
-  * `verify` to ensure the code doesn't have blatant bugs.
+  * `verify` to ensure the code doesn't have any blatant bugs.
   * `audit` to ensure the code satisfies basic code style and guidelines.
   * `doc` to ensure the code contains reasonable amount of documentation.
 
@@ -64,10 +62,10 @@ The set of flows should be as follows:
 
 ## Configuration
 
-Since this builds on the `Makefile.stable.toml` provided by `cargo make`, some
-of the configuration variables provided there. Most notable is
-`CARGO_MAKE_COVERAGE_PROVIDER` to control how coverage is collected (by default,
-using `kcov`).
+Since this builds on some of the tasks defined in the `Makefile.stable.toml`
+provided by `cargo make`, it is controlled some of the configuration variables
+provided there. Most notable is `CARGO_MAKE_COVERAGE_PROVIDER` to control how
+coverage is collected (by default, using `kcov`).
 
 In addition, the following environment variables are specific to `SCMF`:
 
