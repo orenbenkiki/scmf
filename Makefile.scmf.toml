@@ -4,8 +4,6 @@ namespace = "default"
 
 [env]
 RUSTFLAGS = "-D warnings"
-# TODO: Remove this when cargo make fixes the default.
-CARGO_MAKE_TEST_COVERAGE_DEFAULT_BINARY_FILTER = "${CARGO_MAKE_CRATE_FS_NAME}-[a-z0-9]*$\\|test_[_a-z0-9]*-[a-z0-9]*$\\|[a-z0-9]*_test-[_a-z0-9]*$"
 
 [tasks.pc]
 category = "Flows / Top"
