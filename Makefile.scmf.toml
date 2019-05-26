@@ -170,6 +170,9 @@ category = "Steps / Verify"
 extend = "default::coverage"
 private = false
 
+[tasks."default::coverage-kcov"]
+env = { "CARGO_MAKE_KCOV_INCLUDE_PATTERN" = "${CARGO_MAKE_WORKING_DIRECTORY}/src/,${CARGO_MAKE_WORKING_DIRECTORY}/tests/" }
+
 [tasks.coverage-annotations]
 category = "Steps / Verify"
 description = "Verify the coverage annotations in the code."
