@@ -4,15 +4,19 @@ KCOV_VERSION=34
 
 CWD="$PWD"
 
-KWD="$HOME/.cache/cargo-make/kcov.$$.`date +%s`"
+KWD="$HOME/.cache/cargo-make/kcov.$KCOV_VERSION"
 mkdir -p $KWD
 cd $KWD
 
-wget https://github.com/SimonKagstrom/kcov/archive/v$KCOV_VERSION.zip
-unzip v$KCOV_VERSION.zip
-cd kcov-$KCOV_VERSION
+if [ ! -d build ]
+then
+    wget https://github.com/SimonKagstrom/kcov/archive/v$KCOV_VERSION.zip
+    unzip v$KCOV_VERSION.zip
+    cd kcov-$KCOV_VERSION
 
-mkdir build
+    mkdir build
+fi
+
 cd ./build
 cmake ..
 make
