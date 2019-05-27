@@ -11,7 +11,7 @@ KWD="$HOME/.cache/cargo-make/kcov-$KCOV_VERSION"
 
 mkdir -p $HOME/.cache/cargo-make
 cd $HOME/.cache/cargo-make
-rm -rf kcov.* *.zip* #TODOX
+sudo rm -rf kcov.* *.zip* #TODOX
 
 if [ ! -d $KWD/build ]
 then
