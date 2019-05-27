@@ -1,6 +1,6 @@
 #!/bin/sh
 
-KCOV_VERSION="$1"
+KCOV_VERSION=34
 
 CWD="$PWD"
 
