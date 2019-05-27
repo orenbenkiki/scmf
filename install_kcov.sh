@@ -1,6 +1,7 @@
 #!/bin/sh
 
 set -e
+set -x
 
 KCOV_VERSION=34
 
@@ -10,11 +11,14 @@ KWD="$HOME/.cache/cargo-make/kcov.$KCOV_VERSION"
 mkdir -p $KWD
 cd $KWD
 
+ls
+
 if [ ! -d build ]
 then
     sudo apt-get install cmake gcc
     wget https://github.com/SimonKagstrom/kcov/archive/v$KCOV_VERSION.zip
     unzip v$KCOV_VERSION.zip
+    rm v$KCOV_VERSION.zip*
     cd kcov-$KCOV_VERSION
 
     mkdir build
