@@ -95,7 +95,7 @@ dependencies = [
     "pre-audit",
     "check-format",
     "clippy",
-    "todox",
+    "todox",  # ALLOW TODOX
     "coverage-annotations",
     "outdated",
     "post-audit",
