@@ -67,6 +67,7 @@ description = "Customization point for additional preparation steps."
 category = "Steps / Prepare"
 extend = "default::format"
 private = false
+dependencies = ["install-rustfmt"]
 condition = { env_not_set = [ "SCMF_DISABLE_FORMAT" ] }
 
 [tasks.ci]
@@ -113,6 +114,7 @@ description = "Customization point for additional audit steps."
 category = "Steps / Audit"
 extend = "default::check-format"
 private = false
+dependencies = ["install-rustfmt"]
 condition = { env_not_set = [ "SCMF_DISABLE_CHECK_FORMAT" ] }
 
 [tasks.clippy]
