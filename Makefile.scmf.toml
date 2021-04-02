@@ -185,3 +185,7 @@ condition = { env_not_set = [ "SCMF_DISABLE_COVERAGE_ANNOTATIONS" ] }
 category = "Steps / Doc"
 extend = "default::docs"
 private = false
+
+[tasks.install-rustfmt]
+extend = "default::install-rustfmt"
+condition = { env_not_set = [ "SCMF_DISABLE_RUSTFMT" ] }
